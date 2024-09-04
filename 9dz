@@ -1,0 +1,21 @@
+class Creature:
+    def __init__(self):
+        self.type = None
+        self.name = "Unknown"
+        
+    def __repr__(self):
+        return (f"My name is {self.name} and I'm a {self.type}")
+        
+class Human(Creature):
+    def __init__(self):
+        super.__init__(self)
+        self.type = "Human"
+        self.name = "Chelovek"
+        
+class Person(Human):
+    def __init__(self):
+        super.__init__(self)
+        self.name = "Maria"
+
+person = Person()
+print(person)
